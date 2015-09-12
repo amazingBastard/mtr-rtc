@@ -1,8 +1,6 @@
-# Meteor Seed
+# Meteor RTC
 
-A starter kit for Meteor with folder structure and pre-added packages.
-
-**Note: Still a work in progress.**
+A prototype for testing Meteor and RTC
 
 * [Roadmap](#roadmap)
 * [How to use](#how-to-use)
@@ -33,17 +31,26 @@ curl https://install.meteor.com/ | sh
 ### Installation
 
 ```
-git clone git@github.com:amazingBastard/Meteor-Seed.git
-cd Meteor-Seed
-meteor
+git clone git@github.com:amazingBastard/reactfolio.git
+cd reactfolio
+```
+
+Run the following to get the bash file to work:
+
+```
+chmod +x ./run.sh
+```
+
+Now you can start the app with the following command:
+
+```
+./run.sh
 ```
 
 ### Deployments
 
 It is highly recommended to use [Meteor Up](https://github.com/arunoda/meteor-up) for easy deployments.
 Have a look at the repository for more information.
-
-There are other ways to deploy to your server besides Meteor Up. Here is a [step by step guide from Digital Ocean](http://devo.ps/blog/deploy-your-meteor-apps-on-digital-ocean-in-5-minutes/).
 
 ## Structure
 
@@ -57,6 +64,7 @@ There are other ways to deploy to your server besides Meteor Up. Here is a [step
   * [fastclick](http://github.com/meteor/meteor/tree/devel/packages/fastclick)
   * [fortawesome:fontawesome](http://github.com/MeteorPackaging/Font-Awesome)
   * [natestrauser:animate-css](http://github.com/nate-strauser/meteor-animate-css)
+  * [angel1411:rtcmulticonnection](https://github.com/muaz-khan/RTCMultiConnection)
 * Development
   * [flemay:less-autoprefixer](http://github.com/flemay/less-autoprefixer)
   * [momentjs:moment](http://github.com/moment/moment/)
@@ -81,6 +89,7 @@ app/                # Application folder
         common/             # Common components (i.e. header, footer)
         elements/           # Re-usable components
   collections/        # Collection files, for each Meteor.Collection
+  lib/                # Lib files that get executed first
   packages/           # Packages folder (custom meteor packages, npm)
   private/            # Private files
   public/             # Public files
@@ -103,12 +112,6 @@ environments/       # Environments folder
   production/         # production environment
 
 ```
-
-## Attributions
-
-The app structure is my own deviation from the structure used in [Meteor Boilerplate](https://github.com/matteodem/meteor-boilerplate)/
-
-Separating the app and environments was something I learned from [Josh Owens](https://github.com/queso) and [Sam Hattoum](https://github.com/samhatoum).
 
 ## License
 
